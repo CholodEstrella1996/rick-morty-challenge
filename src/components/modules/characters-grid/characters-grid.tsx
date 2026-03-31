@@ -1,4 +1,3 @@
-import React from 'react';
 import { CharacterCard } from '@/components/molecules/character-card';
 import type { Character } from '@/features/characters/types/character';
 import styles from './characters-grid.module.css';
@@ -19,8 +18,7 @@ export function CharactersGrid({
   isLoading = false,
 }: CharactersGridProps) {
   
-  // Empty state or Loading state could also be encapsulated into Atoms,
-  // but for now we inline them nicely.
+
   if (isLoading) {
     return <div className={styles.statusBox}>Cargando personajes...</div>;
   }

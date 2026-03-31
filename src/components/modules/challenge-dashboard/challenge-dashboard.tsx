@@ -35,7 +35,6 @@ export function ChallengeDashboard() {
             />
           </div>
 
-          {/* Separador visual de Versos */}
           <div className={styles.vsDivider}>
              <div className={styles.vsText}>VS</div>
           </div>

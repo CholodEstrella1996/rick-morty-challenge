@@ -59,7 +59,7 @@
 
 .text-green { color: #b2d83b; }
 .text-blue { color: #00a8ff; }
-.text-shared { color: #00a8ff; } /* En shared el S01E01 es celeste en tu diseño */
+.text-shared { color: #00a8ff; }
 
 .dots {
   display: flex;

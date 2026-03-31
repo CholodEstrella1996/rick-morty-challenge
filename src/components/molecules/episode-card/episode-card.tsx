@@ -2,13 +2,13 @@ import React from 'react';
 import styles from './episode-card.module.css';
 
 interface EpisodeCardProps {
-  episodeCode: string; // S01E01
+  episodeCode: string;
   date: string;
   name: string;
   variant: 'green' | 'blue' | 'shared';
 }
 
-export function EpisodeCard({ episodeCode, date, name, variant }: EpisodeCardProps) {
+export const EpisodeCard = React.memo(function EpisodeCard({ episodeCode, date, name, variant }: EpisodeCardProps) {
   return (
     <div className={`${styles.card} ${styles[variant]}`}>
       <div className={styles.header}>
@@ -37,4 +37,4 @@ export function EpisodeCard({ episodeCode, date, name, variant }: EpisodeCardPro
       )}
     </div>
   );
-}
+});

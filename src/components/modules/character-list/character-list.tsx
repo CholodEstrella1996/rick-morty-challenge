@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useCharacters } from '@/features/characters/hooks/use-characters';
 import { CharactersGrid } from '@/components/modules/characters-grid';
 import { Pagination } from '@/components/molecules/pagination';
@@ -20,10 +20,9 @@ export function CharacterList({
   selectedCharacterId,
   onSelectCharacter,
 }: CharacterListProps) {
-  // Manejamos la página independientemente para cada lista
   const [page, setPage] = useState(1);
   
-  // Hook que creamos que trae caching y fetching automáticos
+  // Hook que cree para traer caching y fetching automáticos
   const { data, isFetching, isError } = useCharacters({ page });
 
   return (

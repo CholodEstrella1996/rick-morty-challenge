@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './character-card.module.css';
 
 interface CharacterCardProps {
@@ -11,7 +12,7 @@ interface CharacterCardProps {
   onClick?: () => void;
 }
 
-export function CharacterCard({
+export const CharacterCard = React.memo(function CharacterCard({
   name,
   image,
   status,
@@ -35,7 +36,13 @@ export function CharacterCard({
       onClick={onClick}
     >
       <div className={styles.avatarContainer}>
-        <img src={image} alt={name} className={styles.avatar} loading="lazy" />
+        <Image 
+          src={image} 
+          alt={name} 
+          className={styles.avatar} 
+          width={72}
+          height={72}
+        />
       </div>
 
       <div className={styles.info}>
@@ -64,4 +71,4 @@ export function CharacterCard({
       </div>
     </div>
   );
-}
+});

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useEpisodesComparison } from '@/features/episodes/hooks/use-episodes-comparison';
 import { EpisodeCard } from '@/components/molecules/episode-card';
 import type { Character } from '@/features/characters/types/character';
@@ -10,7 +9,7 @@ interface EpisodesBoardProps {
 }
 
 export function EpisodesBoard({ character1, character2 }: EpisodesBoardProps) {
-  const { sharedEpisodes, character1Exclusive, character2Exclusive, isLoading } = useEpisodesComparison(character1, character2);
+  const { sharedEpisodes, character1Exclusive, character2Exclusive, isLoading, isError } = useEpisodesComparison(character1, character2);
 
   if (!character1 || !character2) return null;
 
@@ -23,9 +22,17 @@ export function EpisodesBoard({ character1, character2 }: EpisodesBoardProps) {
     );
   }
 
+  if (isError) {
+    return (
+      <div className={styles.errorContainer}>
+        <p>Error en la red interdimensional. No se pudieron obtener los episodios del archivo central.</p>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.board}>
-      {/* Columna 1 */}
+
       <div className={styles.column}>
         <div className={`${styles.columnHeader} ${styles.leftHeader}`}>
            <div className={`${styles.indicator} ${styles.bgGreen}`} />
@@ -42,7 +49,6 @@ export function EpisodesBoard({ character1, character2 }: EpisodesBoardProps) {
         </div>
       </div>
 
-      {/* Columna 2 (Shared) */}
       <div className={styles.column}>
         <div className={`${styles.columnHeader} ${styles.centerHeader}`}>
            <h3 className={`${styles.title} ${styles.textCyan}`}>
@@ -58,7 +64,6 @@ export function EpisodesBoard({ character1, character2 }: EpisodesBoardProps) {
         </div>
       </div>
 
-      {/* Columna 3 */}
       <div className={styles.column}>
         <div className={`${styles.columnHeader} ${styles.rightHeader}`}>
            <div className={styles.textRight}>

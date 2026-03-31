@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './pagination.module.css';
 
 interface PaginationProps {
@@ -17,7 +16,7 @@ export function Pagination({
   const isPrevDisabled = currentPage <= 1 || isLoading;
   const isNextDisabled = currentPage >= totalPages || isLoading;
 
-  if (totalPages <= 1 && !isLoading) return null; // No need to paginate if only 1 page
+  if (totalPages <= 1 && !isLoading) return null; 
 
   return (
     <div className={styles.container}>

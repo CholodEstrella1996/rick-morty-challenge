@@ -31,8 +31,5 @@ export async function getCharacters(
   const queryString = queryParams.toString();
   const endpoint = queryString ? `/character?${queryString}` : '/character';
 
-  return apiClient<GetCharactersResponse>(endpoint, {
-    // Next.js specific cache options could go here
-    // cache: 'force-cache'
-  });
+  return apiClient<GetCharactersResponse>(endpoint);
 }

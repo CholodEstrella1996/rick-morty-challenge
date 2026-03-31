@@ -1,11 +1,6 @@
-/**
- * Global API Client to handle base configuration and common fetch utilities.
- */
 const BASE_URL = 'https://rickandmortyapi.com/api';
 
-export interface FetchOptions extends RequestInit {
-  // Future custom options can be added here
-}
+export type FetchOptions = RequestInit;
 
 export async function apiClient<T>(
   endpoint: string,
@@ -30,7 +25,7 @@ export async function apiClient<T>(
     try {
       errorData = await response.json();
     } catch {
-      // Ignored if response isn't JSON
+
     }
     throw new Error(
       errorData?.error || `API request failed with status: ${response.status}`

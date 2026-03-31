@@ -17,8 +17,7 @@ export interface Character {
   origin: CharacterLocation;
   location: CharacterLocation;
   image: string;
-  episode: string[]; // URLs of episodes the character appeared in
-  url: string;
+  episode: string[];
   created: string;
 }
 
