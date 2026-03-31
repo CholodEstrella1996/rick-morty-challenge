@@ -1,0 +1,84 @@
+.card {
+  background-color: #16192b;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #1e2235;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.shared {
+  background-color: #1a1f35;
+  border-color: #252b48;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.code {
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+
+.date {
+  color: #5b627a;
+  font-size: 0.75rem;
+  font-family: monospace;
+}
+
+.name {
+  color: #e2e8f0;
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.description {
+  color: #7b839e;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.text-green { color: #b2d83b; }
+.text-blue { color: #00a8ff; }
+.text-shared { color: #00a8ff; } /* En shared el S01E01 es celeste en tu diseño */
+
+.dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.dotBlue { background-color: #00a8ff; }
+.dotGreen { background-color: #b2d83b; }
+
+.sharedFooter {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #252b48;
+  display: flex;
+  justify-content: flex-end;
+}

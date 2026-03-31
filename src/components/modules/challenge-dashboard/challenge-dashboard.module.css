@@ -1,0 +1,83 @@
+.main {
+  min-height: 100vh;
+  background-color: #0f111a;
+  padding: 24px 40px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.title {
+  color: #ffffff;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.titleHighlight {
+  color: #b2d83b;
+}
+
+.subtitle {
+  color: #a0a4b8;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+.listsContainer {
+  display: flex;
+  gap: 40px;
+  /* Fija la altura total del contenedor de las listas al ~60% del alto visual */
+  height: 60vh; 
+  min-height: 480px; /* Un tamaño mínimo por si la pantalla es muy pequeña */
+}
+
+.listColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.vsDivider {
+  width: 2px;
+  background-color: #1e2130;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Asegura que la línea tome toda la altura controlada de 60vh */
+}
+
+.vsText {
+  position: absolute;
+  background-color: #0f111a;
+  color: #00a8ff;
+  font-weight: 900;
+  font-size: 1.8rem;
+  padding: 20px 0;
+  font-style: italic;
+  transform: translateY(-50%); /* Centra el texto perfectamente */
+  top: 50%;
+}
+
+.episodesPlaceholder {
+  margin-top: 40px; /* Reducido para acercarlo a las listas */
+  color: #a0a4b8;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 40px 0;
+  border: 1px dashed #2a2e42;
+  border-radius: 12px;
+}

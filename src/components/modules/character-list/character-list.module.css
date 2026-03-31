@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #1e2130;
+  padding-bottom: 8px;
+}
+
+.text-green { color: #b2d83b; }
+.text-blue { color: #00a8ff; }
+
+.content {
+  flex: 1;
+  overflow-y: auto; /* Permite escrollear solo los personajes */
+  padding-right: 12px;
+}
+
+/* Custom Scrollbar super elegante */
+.content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: rgba(30, 33, 48, 0.4); 
+  border-radius: 8px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: #2a2e42; 
+  border-radius: 8px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: #3e4460; 
+}
+
+.error {
+  color: #f44336;
+  padding: 16px;
+  background-color: rgba(244, 67, 54, 0.1);
+  border: 1px dashed rgba(244, 67, 54, 0.5);
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 16px;
+}

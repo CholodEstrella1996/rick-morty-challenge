@@ -1,0 +1,21 @@
+.grid {
+  display: grid;
+  /* Adjusts the columns based on available space, keeping cards around 300px min width */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.statusBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  color: #a0a4b8;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  border: 1px dashed #2a2e42;
+  border-radius: 8px;
+  background-color: transparent;
+}

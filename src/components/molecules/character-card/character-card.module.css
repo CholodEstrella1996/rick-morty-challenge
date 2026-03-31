@@ -1,0 +1,119 @@
+.card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #1e2130;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  width: 100%;
+  max-width: 340px;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  background-color: #2a2e42;
+}
+
+/* Selected Variants */
+.card.selected.green {
+  background-color: #243026; /* Slight green tint in background */
+  border-color: #b2d83b;
+  box-shadow: 0 0 12px rgba(178, 216, 59, 0.15);
+}
+
+.card.selected.blue {
+  background-color: #1e2838; /* Slight blue tint in background */
+  border-color: #00a8ff;
+  box-shadow: 0 0 12px rgba(0, 168, 255, 0.15);
+}
+
+.avatarContainer {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #2a2e42;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  gap: 4px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  font-family: inherit;
+  line-height: 1.2;
+}
+
+/* Selected text colors */
+.text-green { color: #b2d83b; }
+.text-blue { color: #00a8ff; }
+
+.checkIcon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e2130;
+}
+.checkIcon svg {
+  width: 10px;
+  height: 10px;
+}
+
+.bg-green { background-color: #b2d83b; }
+.bg-blue { background-color: #00a8ff; }
+
+.statusRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.statusText {
+  color: #a0a4b8;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.species {
+  color: #6a6f87;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
