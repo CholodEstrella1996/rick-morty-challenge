@@ -30,8 +30,18 @@ export function EpisodesBoard({ character1, character2 }: EpisodesBoardProps) {
     );
   }
 
+  const isParadox = character1.id === character2.id;
+
   return (
-    <div className={styles.board}>
+    <div className={styles.boardWrapper}>
+      {isParadox && (
+        <div className={styles.paradoxAlert}>
+          ℹ️ El mismo personaje ({character1.name}) fue seleccionado en ambas listas. 
+          Por lo tanto, todos sus episodios se listarán únicamente en la sección de episodios compartidos.
+        </div>
+      )}
+
+      <div className={styles.board}>
 
       <div className={styles.column}>
         <div className={`${styles.columnHeader} ${styles.leftHeader}`}>
@@ -79,6 +89,7 @@ export function EpisodesBoard({ character1, character2 }: EpisodesBoardProps) {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 }

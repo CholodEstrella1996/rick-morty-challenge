@@ -1,9 +1,27 @@
+.boardWrapper {
+  width: 100%;
+}
+
+.paradoxAlert {
+  width: 100%;
+  padding: 16px;
+  margin-top: 40px;
+  background-color: rgba(255, 193, 7, 0.1);
+  border: 1px dashed rgba(255, 193, 7, 0.4);
+  color: #ffc107;
+  border-radius: 12px;
+  text-align: center;
+  font-family: inherit;
+  font-weight: 500;
+  box-shadow: 0 0 16px rgba(255, 193, 7, 0.1);
+}
+
 .board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 24px;
 }
 
 .column {
